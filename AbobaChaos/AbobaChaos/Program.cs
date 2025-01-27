@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             int x = 9 + 20;
             Console.WriteLine(x + " asdfasdf?!");
