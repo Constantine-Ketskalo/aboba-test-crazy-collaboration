@@ -1,12 +1,13 @@
-﻿namespace AbobaChaos
+﻿using System;
+
+namespace AbobaChaos
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int x = 9 + 20;
-            Console.WriteLine(x + " asdfasdf?!");
-
+            Elephant elephant = new Elephant("Dumbo", 10);
+            elephant.DisplayInfo();
             Console.WriteLine("Hello, World!");
 
             var nazario = new NazarioClass();
