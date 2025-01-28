@@ -8,4 +8,10 @@
             Console.WriteLine("Hello, World!");
         }
     }
+
+    public class Aboba
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
 }
