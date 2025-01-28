@@ -7,6 +7,7 @@ namespace QueryableDatabase.Migrations
     {
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Armageddon> Armageddons { get; set; }
 
         public MsSqlContext(DbContextOptions<MsSqlContext> dbContextOptions) : base(dbContextOptions) { }
     }
