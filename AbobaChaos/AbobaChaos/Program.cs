@@ -11,6 +11,7 @@
                  " 'civilized people'? They'll eat each other. See, I'm not a monster. I'm just ahead of the curve.";
 
             Console.WriteLine(jokerMonolog);
+            Console.WriteLine("New changes");
         }
     }
 }
