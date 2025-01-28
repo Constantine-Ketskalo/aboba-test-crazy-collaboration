@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QueryableDatabase.Migrations;
 
@@ -10,9 +11,11 @@ using QueryableDatabase.Migrations;
 namespace QueryableDatabase.Migrations
 {
     [DbContext(typeof(MsSqlContext))]
-    partial class MsSqlContextModelSnapshot : ModelSnapshot
+    [Migration("20250128094022_MyNewMigrationForGitConflict")]
+    partial class MyNewMigrationForGitConflict
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,22 +49,6 @@ namespace QueryableDatabase.Migrations
                     b.ToTable("Addresses");
                 });
 
-            modelBuilder.Entity("QueryableDatabase.Models.Armageddon", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Armageddons");
-                });
-
             modelBuilder.Entity("QueryableDatabase.Models.Building", b =>
                 {
                     b.Property<int>("Id")
@@ -77,12 +64,10 @@ namespace QueryableDatabase.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MyNewPropertyForNewMigration")
-                        .IsRequired();
-                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name");
-                    b.Property<string>("ShowStopper")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YearBuilt")
