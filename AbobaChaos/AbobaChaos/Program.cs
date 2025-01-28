@@ -12,6 +12,8 @@
 
             Console.WriteLine(jokerMonolog);
             Console.WriteLine("New changes");
+
+
         }
     }
 }
