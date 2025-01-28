@@ -11,6 +11,9 @@
 
             var nazario = new NazarioClass();
             Console.WriteLine(nazario.Nazario);
+            
+            var simplio = new SimplioClass();
+            Console.WriteLine(simplio.Simplio);
         }
     }
 
@@ -22,6 +25,15 @@
         public NazarioClass()
         {
             Nazario = "Nazario";
+        }
+    }
+    public class SimplioClass
+    {
+        public string Simplio { get; set; }
+
+        public SimplioClass()
+        {
+            Simplio = "Simplio";
         }
     }
 }
