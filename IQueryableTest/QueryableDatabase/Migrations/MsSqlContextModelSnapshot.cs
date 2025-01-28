@@ -61,11 +61,11 @@ namespace QueryableDatabase.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MyNewPropertyForNewMigration")
-                        .IsRequired()
+                        .IsRequired();
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Name");
                     b.Property<string>("ShowStopper")
                         .HasColumnType("nvarchar(max)");
 
