@@ -24,5 +24,7 @@ namespace QueryableDatabase.Models
         // property for causing migrations conflicts
         // MUAHAHAHAHAAA!!!
         public string? ShowStopper { get; set; }
+
+        public string? MyTaskProperty { get; set; }
     }
 }
