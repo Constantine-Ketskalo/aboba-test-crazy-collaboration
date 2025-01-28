@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QueryableDatabase.Migrations;
 
@@ -10,9 +11,11 @@ using QueryableDatabase.Migrations;
 namespace QueryableDatabase.Migrations
 {
     [DbContext(typeof(MsSqlContext))]
-    partial class MsSqlContextModelSnapshot : ModelSnapshot
+    [Migration("20250128094330_AddedBuildingShowStopperProperty")]
+    partial class AddedBuildingShowStopperProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,9 +58,6 @@ namespace QueryableDatabase.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("AddressId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BuildingTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("Floors")
