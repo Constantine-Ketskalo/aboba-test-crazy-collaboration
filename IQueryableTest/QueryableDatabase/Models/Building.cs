@@ -20,5 +20,6 @@ namespace QueryableDatabase.Models
 
         public int Floors { get; set; }
         public int YearBuilt { get; set; }
+        public string BuildingNumber { get; set; }
     }
 }

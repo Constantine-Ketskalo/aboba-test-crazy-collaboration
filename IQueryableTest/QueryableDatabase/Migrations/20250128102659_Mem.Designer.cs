@@ -11,7 +11,7 @@ using QueryableDatabase.Migrations;
 namespace QueryableDatabase.Migrations
 {
     [DbContext(typeof(MsSqlContext))]
-    [Migration("20250128094959_Mem")]
+    [Migration("20250128102659_Mem")]
     partial class Mem
     {
         /// <inheritdoc />
@@ -59,6 +59,10 @@ namespace QueryableDatabase.Migrations
 
                     b.Property<int?>("AddressId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BuildingNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Floors")
                         .HasColumnType("int");

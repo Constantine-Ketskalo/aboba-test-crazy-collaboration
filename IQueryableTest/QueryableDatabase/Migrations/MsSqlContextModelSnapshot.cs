@@ -57,6 +57,10 @@ namespace QueryableDatabase.Migrations
                     b.Property<int?>("AddressId")
                         .HasColumnType("int");
 
+                    b.Property<string>("BuildingNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Floors")
                         .HasColumnType("int");
 
