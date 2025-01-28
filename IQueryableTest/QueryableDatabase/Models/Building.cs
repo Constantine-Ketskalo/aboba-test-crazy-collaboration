@@ -20,6 +20,7 @@ namespace QueryableDatabase.Models
 
         public int Floors { get; set; }
         public int YearBuilt { get; set; }
+        public int BuildingTypeId { get; set; }
 
         // property for causing migrations conflicts
         // MUAHAHAHAHAAA!!!
