@@ -1,4 +1,5 @@
-﻿namespace AbobaChaos
+﻿
+namespace AbobaChaos
 {
     internal class Program
     {
@@ -11,6 +12,9 @@
 
             var nazario = new NazarioClass();
             Console.WriteLine(nazario.Nazario);
+
+            var aboba = new Class1();
+            Console.WriteLine(aboba.GetHelloWorld());
         }
     }
 
