@@ -6,6 +6,7 @@
         {
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Лох підзаборний)");
+            Console.WriteLine("Лох підзаборний2x)");
         }
     }
 }
