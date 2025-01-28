@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Не треба вуйку");
-            Console.WriteLine("AAAAAAAAAAAAAAAAA");
         }
     }
 }
