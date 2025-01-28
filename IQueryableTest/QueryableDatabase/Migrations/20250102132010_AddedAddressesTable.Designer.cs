@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QueryableDatabase.Migrations;
 
@@ -10,16 +11,15 @@ using QueryableDatabase.Migrations;
 namespace QueryableDatabase.Migrations
 {
     [DbContext(typeof(MsSqlContext))]
-    partial class MsSqlContextModelSnapshot : ModelSnapshot
+    [Migration("20250102132010_AddedAddressesTable")]
+    partial class AddedAddressesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "9.0.0")
-                .HasAnnotation("Proxies:ChangeTracking", false)
-                .HasAnnotation("Proxies:CheckEquality", false)
-                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -60,13 +60,7 @@ namespace QueryableDatabase.Migrations
                     b.Property<int>("Floors")
                         .HasColumnType("int");
 
-                    b.Property<string>("MyNewPropertyForNewMigration")
-                        .IsRequired()
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                    b.Property<string>("ShowStopper")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("YearBuilt")
@@ -82,15 +76,10 @@ namespace QueryableDatabase.Migrations
             modelBuilder.Entity("QueryableDatabase.Models.Building", b =>
                 {
                     b.HasOne("QueryableDatabase.Models.Address", "Address")
-                        .WithMany("Buildings")
+                        .WithMany()
                         .HasForeignKey("AddressId");
 
                     b.Navigation("Address");
-                });
-
-            modelBuilder.Entity("QueryableDatabase.Models.Address", b =>
-                {
-                    b.Navigation("Buildings");
                 });
 #pragma warning restore 612, 618
         }

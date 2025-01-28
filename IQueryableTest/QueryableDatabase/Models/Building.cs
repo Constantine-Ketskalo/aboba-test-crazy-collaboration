@@ -22,5 +22,8 @@ namespace QueryableDatabase.Models
         public int YearBuilt { get; set; }
 
         public string MyNewPropertyForNewMigration { get; set; }
+        // property for causing migrations conflicts
+        // MUAHAHAHAHAAA!!!
+        public string? ShowStopper { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string jokerMonolog = "You see, their morals," +
                  " their code... it's a bad joke. Dropped at " +
